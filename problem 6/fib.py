@@ -1,14 +1,17 @@
 def fibonacci(n):
+    if start_num < 0:
+        return -1
+    elif start_num == 0:
+        return 0
+    elif start_num == 1:
+        return 1
     
-    #write your code here
-    x=0
-    y=1
-    while start_num>0:
-        z=y-x
-        x=x+z
-        y=y+z
-        start_num-=1
-    return (x+y)
+    x, y = 0, 1
+    for _ in range(2, start_num + 1):
+        x, y = y, x + y
+    return y
+
+
 
 
 if __name__ == '__main__':
