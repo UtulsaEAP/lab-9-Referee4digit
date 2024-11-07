@@ -1,4 +1,4 @@
-def fibonacci(n):
+def fibonacci(start_num):
     if start_num < 0:
         return -1
     elif start_num == 0:
@@ -10,9 +10,6 @@ def fibonacci(n):
     for _ in range(2, start_num + 1):
         x, y = y, x + y
     return y
-
-
-
 
 if __name__ == '__main__':
     start_num = int(input())
